@@ -1,4 +1,4 @@
-body .inner-wrapper {
+body > main {
     padding: 50px;
 }
 
