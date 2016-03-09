@@ -42,3 +42,17 @@ appearance id.
 product id.
 
 The API returns JSON (for now).
+
+# Performance
+
+## Spritesheet
+
+By replacing the icon png's to a spritesheet that uses span elements for icon placement, i managed to remove about 15ms from the loading time
+
+### Before Spritesheet
+
+![beforeSprite](public/readme/beforesprite.jpg)
+
+### After Spritesheet
+
+![afterSprite](public/readme/aftersprite.jpg)
