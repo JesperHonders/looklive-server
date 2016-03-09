@@ -56,3 +56,9 @@ By replacing the icon png's to a spritesheet that uses span elements for icon pl
 ### After Spritesheet
 
 ![afterSprite](public/readme/aftersprite.jpg)
+
+## CSS
+
+Previously the CSS regarding layout was build-up by using floats and clears, by rewriting this to a CSS which is using Flex-Box for layout, i managed to remove quite a bit loading time regarding the Render time.
+
+See detailed testing [here](https://docs.google.com/spreadsheets/d/1kseb1HDXnX40pStBezwGHbe8NSIa5znfb8iNDWwJ6uo/edit#gid=0)
