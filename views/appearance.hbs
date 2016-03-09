@@ -9,12 +9,11 @@
         <h2><img class="avatar" src="{{ item.subject.avatar.url }}"> {{ item.subject.name }}</h2>
         <h1>{{ item.title }}</h1>
 
-        <article class="appearance-products">
+        <section class="appearance-products">
             <h1>Products</h1>
-            <div class="appearance-products-inner">
                 {{#each products}}
-                    <div class="product" data-uuid="{{id}}">
-                        <div class="actual">
+                    <main class="product" data-uuid="{{id}}">
+                        <article class="actual">
                             <div class="image">
                                 <h1>Actual</h1>
                                 <img src="{{image.url}}">
@@ -23,9 +22,9 @@
                                 <h1>{{ name }}</h1>
                                 <h2>{{ brand.name }}</h2>
                             </div>
-                        </div>
+                        </article>
                         {{#each similars}}
-                            <div class="similar">
+                            <article class="similar">
                                 <div class="image">
                                     <h1>{{ similar_type }}</h1>
                                     <img src="{{image.url}}">
@@ -34,11 +33,10 @@
                                     <h1>{{ name }}</h1>
                                     <h2>{{ brand.name }}</h2>
                                 </div>
-                            </div>
+                            </article>
                         {{/each}}
-                    </div>
+                    </main>
                 {{/each}}
-            </div>
         </article>
     </aside>
 </section>

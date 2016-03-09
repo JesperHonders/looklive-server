@@ -207,3 +207,47 @@ body .actual .info h2, body .similar .info h2 {
     font-size: 16px;
     margin: 1em 0;
 }
+
+/* Sprites */
+
+.sprite {
+    background-image: url(/icons/png/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-brands {
+    width: 31px;
+    height: 25px;
+    background-position: -5px -5px;
+}
+
+.sprite-home {
+    width: 29px;
+    height: 25px;
+    background-position: -46px -5px;
+}
+
+.sprite-latest {
+    width: 24px;
+    height: 26px;
+    background-position: -85px -5px;
+}
+
+.sprite-music {
+    width: 25px;
+    height: 25px;
+    background-position: -119px -5px;
+}
+
+.sprite-people {
+    width: 28px;
+    height: 25px;
+    background-position: -154px -5px;
+}
+
+.sprite-shows {
+    width: 31px;
+    height: 25px;
+    background-position: -192px -5px;
+}
