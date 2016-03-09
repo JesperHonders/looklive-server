@@ -1,22 +1,59 @@
-/*global document*/
-    
-var product = document.querySelector('.product'),
-    indicator = document.querySelector('.product-indicator[data-uuid="' + product.attributes[1].value + '"]'),
-    indicators = document.getElementsByClassName('product-indicator'),
-    i = 0;
+(function () {
+    'use strict';
 
-product.classList.add('product-active');
-indicator.classList.add('product-indicator-active');
+    /**
+     * Invoked when the page is ready.
+     *
+     * @param  {Function} fn
+     * @return {void}
+     */
+    function ready(fn) {
+        if (document.readyState !== 'loading') {
+            fn();
+        } else {
+            document.addEventListener('DOMContentLoaded', fn);
+        }
+    }
 
-function change(e) {
-    "use strict";
-    var id = e.currentTarget.attributes[2].value;
-    document.querySelector('.product-indicator-active').classList.remove('product-indicator-active');
-    e.currentTarget.classList.add('product-indicator-active');
-    document.querySelector('.product-active').classList.remove('product-active');
-    document.querySelector('.product[data-uuid="' + id + '"]').classList.add('product-active');
-}
+    /**
+     * Set the classes on the appearence page.
+     *
+     * @return {void}
+     */
+    function appearance() {
+        var firstProduct = document.querySelector('.product'),
+            firstIndicator = document.querySelector(
+            '.product-indicator[data-uuid="' + firstProduct.getAttribute('data-uuid') + '"]'
+        );
+        var indicators = document.querySelectorAll('.product-indicator');
 
-for (i; i < indicators.length; i += 1) {
-    indicators[i].addEventListener('click', change, false);
-}
+        firstProduct.classList.add('product-active');
+        firstIndicator.classList.add('product-indicator-active');
+
+        Array.prototype.forEach.call(indicators, function (el) {
+            el.addEventListener('click', function (event) {
+                var id = event.currentTarget.getAttribute('data-uuid');
+
+                document
+                    .querySelector('.product-active')
+                    .classList.remove('product-active');
+
+                document
+                    .querySelector('.product-indicator-active')
+                    .classList.remove('product-indicator-active');
+
+                document
+                    .querySelector('.product[data-uuid="' + id + '"]')
+                    .classList.add('product-active');
+
+                event.currentTarget.classList.add('product-indicator-active');
+            });
+        });
+    }
+
+    ready(function () {
+        if (/appearance/.test(window.location.href)) {
+            appearance();
+        }
+    });
+}());
