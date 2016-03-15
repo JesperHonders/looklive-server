@@ -4,7 +4,6 @@
         <title>{{title}}</title>
         <link rel='stylesheet' href='/styles/style.css' />
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900,600,300,200,100' rel='stylesheet' type='text/css'>
-        <script src="/js/app.js"></script>
     </head>
     <body>
         <nav class="nav">
@@ -25,5 +24,21 @@
         <main>
             {{{body}}}
         </main>
+		<script src="/js/app.js"></script>
+		<script id="codeSource">
+			
+			if ('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('sw.js', { scope: './' })
+				.then(function(reg) {
+				  console.info('registered sw', reg);
+				})
+				.catch(function(err) {
+				  console.error('error registering sw', err);
+				});
+			} else {
+				console.log('Not supported')
+			}
+			
+		</script>
     </body>
 </html>
