@@ -45,28 +45,15 @@ The API returns JSON (for now).
 
 # Performance
 
-## Spritesheet
+## Service Worker Caching
 
-By replacing the icon png's to a spritesheet that uses span elements for icon placement, i managed to remove about 15ms from the loading time
+These are the results before the SW caching
 
-### Before Spritesheet
+![beforeSWCache](public/readme/beforeSWCache.jpg)
 
-![beforeSprite](public/readme/beforesprite.jpg)
+And these are the results After the SW caching
 
-### After Spritesheet
+![afterSWCache](public/readme/afterSWCache.jpg)
 
-![afterSprite](public/readme/aftersprite.jpg)
-
-## CSS
-
-Previously the CSS regarding layout was build-up by using floats and clears, by rewriting this to a CSS which is using Flex-Box for layout, i managed to remove quite a bit loading time regarding the Render time.
-
-See detailed testing [here](https://docs.google.com/spreadsheets/d/1kseb1HDXnX40pStBezwGHbe8NSIa5znfb8iNDWwJ6uo/edit#gid=0)
-
-## JQuery
-
-Previously the app used JQuery only to select several elements inside the DOM. This can easily be done without a hefty library like JQuery. By removing JQuery and rewriting the app.js a little bit the scripting time went from 65ms to 4ms.
-
-## Overal
-
-After rewriting some code, removing redundant data and optimizing images i managed to take the loading time from 590ms to 398ms. That is a performance gain of almost 200ms one third of the total.
+As you can see the caching scraped 30ms from the rendering, 3ms from the paint and almost 100ms from other processess
+a total performance gain of 133ms
