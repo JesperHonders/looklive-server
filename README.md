@@ -57,3 +57,36 @@ And these are the results After the SW caching
 
 As you can see the caching scraped 30ms from the rendering, 3ms from the paint and almost 100ms from other processess
 a total performance gain of 133ms
+
+
+# Progressive Web App.
+
+Progressive Web apps are app-like applications on mobile. Basicly its a website wich is "ported" to a application so you can save it on your homescreen.
+
+## What are progressive web apps.
+
+Progressive Web Apps are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required. As the user progressively builds a relationship with the App over time, it becomes more and more powerful. It loads quickly, even on flaky networks, sends relevant push notifications, has an icon on the home screen and loads as a top-level, full screen experience. 
+
+Progressive - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.
+Responsive - Fit any form factor: desktop, mobile, tablet, or whatever is next.
+Connectivity independent - Enhanced with service workers to work offline or on low quality networks.
+App-like - Feel like an app to the user with app-style interactions and navigation because they’re built on the app shell model.
+Fresh - Always up-to-date thanks to the service worker update process.
+Safe - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
+Discoverable - Are identifiable as “applications” thanks to W3C manifests and service worker registration scope allowing search engines to find them.
+Re-engageable - Make re-engagement easy through features like push notifications.
+Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
+Linkable - Easily share via URL and not require complex installation.
+
+
+
+A progressive web app is built with Progressive Enhancement as the core tenant so that they work for as many users as possible irrespective of browser choice. When the User-Agent (such as Chrome, Opera and Firefox) support technologies like Service Worker, Web Push, and the Add to Homescreen banner they can be enhanced to provide a first class native-like experience for the user.
+
+Progressive web apps tend to be architected around the concept of an App Shell. The shell of the functionality is loaded in and displayed to the user (and potentially permanently cached offline) and the content is loaded in dynamically as the user navigates around the app. ()
+
+(definition by Google developers)
+[source](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/)
+
+
+
+
