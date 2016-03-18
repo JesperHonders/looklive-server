@@ -85,7 +85,8 @@ A progressive web app is built with Progressive Enhancement as the core tenant s
 Progressive web apps tend to be architected around the concept of an App Shell. The shell of the functionality is loaded in and displayed to the user (and potentially permanently cached offline) and the content is loaded in dynamically as the user navigates around the app. ()
 
 (definition by Google developers)
-[source](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/)
+[Google Source](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/)
+[Quora Source](https://www.quora.com/What-are-progressive-web-apps)
 
 
 
