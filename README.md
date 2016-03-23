@@ -114,6 +114,36 @@ Progressive web apps tend to be architected around the concept of an App Shell. 
 [Google Source](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/)
 [Quora Source](https://www.quora.com/What-are-progressive-web-apps)
 
+# TaskManager
+
+## What is it?
+
+Why would you want to use a task runner? Well they’re small applications that automate often time consuming and boring tasks.
+
+Minification and concatenation of JavaScript and CSS files
+CSS Preprocessing
+Image optimisation
+Unit testing and linting
+
+By creating a task file you can instruct the task manager to take care of many development tasks and watch for changes in relevant files. All you’ll need to do is start up the task runner and get to work on the more interesting parts of your project.
+
+## Gulp VS Grunt
+
+
+Unlike Grunt which is all about configuration files, Gulp is about streams and code-over-configuration. That might sound off putting to some, but bear with me.
+
+Like Grunt, Gulp uses Node, but you don’t need to know Node to use it. Some basic JavaScript knowledge will help, but is not essential as using Gulp is really simple.
+
+The advantage of Gulp’s code-over-configuration approach is that you end up with a cleaner and easier to read task file with greater consistency between tasks. Each Grunt task can be considerably different in setup.
+
+Gulp uses streams which I won’t go into here, but this is a good resource if you’re interested. The advantage of streams is that you put a file into the stream and get one out; there’s no need for temporary files and folders like with Grunt. The flow is easier to read from the code too.
+
+One other advantage of Gulp over Grunt is that Gulp plugins are kept simple. They are designed to do one thing and do it well. Gulp simply just applies them. With Grunt you can find yourself running into conflict issues or shared functionality
+
+## Gulp FTW
+
+after reading this on the internet i decided to go with Gulp as it is easier to use and my colleagues at work use it to. So if i run in any trouble im sure they can help me out.
+
 # Gulp image optimalisation
 
 After running gulp on the images i managed to take off 800kb in total, wich resulted in a lower render and paint time. Render reduced by 20 ms and paint by 4ms. A total gain of 25ms.
