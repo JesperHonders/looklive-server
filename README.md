@@ -114,6 +114,16 @@ Progressive web apps tend to be architected around the concept of an App Shell. 
 [Google Source](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/)
 [Quora Source](https://www.quora.com/What-are-progressive-web-apps)
 
+# Gulp image optimalisation
+
+After running gulp on the images i managed to take off 800kb in total, wich resulted in a lower render and paint time. Render reduced by 20 ms and paint by 4ms. A total gain of 25ms.
+
+##Before
+![beforeGulpImg](public/readme/beforeGulpImg.jpg)
+
+##after
+![afterGulpImg](public/readme/AfterGulpImg.jpg)
+
 
 
 
