@@ -6,6 +6,18 @@
 
     var links;
     var wrapper;
+	
+	if ('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('../sw.js', { scope: './' })
+				.then(function(reg) {
+				  console.info('registered sw', reg);
+				})
+				.catch(function(err) {
+				  console.error('error registering sw', err);
+				});
+			} else {
+				console.log('Not supported')
+			}
 
 
     function ready(fn) {
@@ -77,6 +89,8 @@
             });
         });
     }
+	
+	
 
     ready(function () {
         if (/appearance/.test(window.location.href)) {

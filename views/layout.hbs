@@ -25,19 +25,5 @@
             {{{body}}}
         </main>
 		<script src="/js/app.js" async></script>
-		<script id="codeSource">
-			
-			if ('serviceWorker' in navigator) {
-			  navigator.serviceWorker.register('sw.js', { scope: './' })
-				.then(function(reg) {
-				  console.info('registered sw', reg);
-				})
-				.catch(function(err) {
-				  console.error('error registering sw', err);
-				});
-			} else {
-				console.log('Not supported')
-			}
-		</script>
     </body>
 </html>

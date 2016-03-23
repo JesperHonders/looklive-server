@@ -5,6 +5,7 @@ this.addEventListener('install', function(event) {
                 './',
                 './js/app.js',
 				'./styles/style.css',
+				'./images/',
             ]);
 			
         })
