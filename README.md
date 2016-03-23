@@ -152,7 +152,7 @@ After running gulp on the images i managed to take off 800kb in total, wich resu
 ![beforeGulpImg](public/readme/beforeGulpImg.jpg)
 
 ##after
-![afterGulpImg](public/readme/AfterGulpImg.jpg)
+![afterGulpImg](public/readme/afterGulpImg.jpg)
 
 
 
