@@ -148,11 +148,17 @@ after reading this on the internet i decided to go with Gulp as it is easier to 
 
 After running gulp on the images i managed to take off 800kb in total, wich resulted in a lower render and paint time. Render reduced by 20 ms and paint by 4ms. A total gain of 25ms.
 
+(A beginners guide running gulp()
+[source](http://andy-carter.com/blog/a-beginners-guide-to-the-task-runner-gulp)
 ##Before
 ![beforeGulpImg](public/readme/beforeGulpImg.jpg)
 
 ##after
 ![afterGulpImg](public/readme/afterGulpImg.jpg)
+
+# HTPP Requests
+
+The looklive server is allready requesting as little as possible if it comes to http requests that are client side, so i choose to minify the app.js wich was 4kb. After minifiying i managed to take off 2 kb wich resulted in a 0.1ms faster loading time, but i doubt those results are trustworthy as they change each refresh.
 
 
 
