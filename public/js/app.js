@@ -61,30 +61,30 @@
     function appearance() {
         var firstProduct = document.querySelector('.product');
         var firstIndicator = document.querySelector(
-            '.product__indicator[data-uuid="' + firstProduct.getAttribute('data-uuid') + '"]'
+            '.product-indicator[data-uuid="' + firstProduct.getAttribute('data-uuid') + '"]'
         );
-        var indicators = document.querySelectorAll('.product__indicator');
+        var indicators = document.querySelectorAll('.product-indicator');
 
-        firstProduct.classList.add('product__active');
-        firstIndicator.classList.add('product__indicator__active');
+        firstProduct.classList.add('product-active');
+        firstIndicator.classList.add('product-indicator-active');
 
         Array.prototype.forEach.call(indicators, function (el) {
             el.addEventListener('click', function (event) {
                 var id = event.currentTarget.getAttribute('data-uuid');
 
                 document
-                    .querySelector('.product__active')
-                    .classList.remove('product__active');
+                    .querySelector('.product-active')
+                    .classList.remove('product-active');
 
                 document
-                    .querySelector('.product__indicator__active')
-                    .classList.remove('product__indicator__active');
+                    .querySelector('.product-indicator-active')
+                    .classList.remove('product-indicator-active');
 
                 document
                     .querySelector('.product[data-uuid="' + id + '"]')
-                    .classList.add('product__active');
+                    .classList.add('product-active');
 
-                event.currentTarget.classList.add('product__indicator__active');
+                event.currentTarget.classList.add('product-indicator-active');
             });
         });
     }
