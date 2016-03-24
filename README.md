@@ -160,6 +160,10 @@ After running gulp on the images i managed to take off 800kb in total, wich resu
 
 The looklive server is allready requesting as little as possible if it comes to http requests that are client side, so i choose to minify the app.js wich was 4kb. After minifiying i managed to take off 2 kb wich resulted in a 0.1ms faster loading time, but i doubt those results are trustworthy as they change each refresh.
 
+# Font Optimalisation
+
+Before the the text was showing after 4 seconds loading time, after declaring the fallback font in de html, i managed to get the showing time to 1.4 seconds. This has been tested on a 2G connection speed (250kbs)
+
 # On digital Ocean
 
 [on Ditial Ocean](http://jepsite.nl/)
