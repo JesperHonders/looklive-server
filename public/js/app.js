@@ -1,18 +1,56 @@
+// Met de hulp van Bart & Casper <3
+// Credits beemstb002 & kasszz
+
 (function () {
     'use strict';
 
-    /**
-     * Invoked when the page is ready.
-     *
-     * @param  {Function} fn
-     * @return {void}
-     */
+    var links;
+    var wrapper;
+	
+	if ('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('../sw.js', { scope: './' })
+				.then(function(reg) {
+				  console.info('registered sw', reg);
+				})
+				.catch(function(err) {
+				  console.error('error registering sw', err);
+				});
+			} else {
+				console.log('Not supported')
+			}
+
     function ready(fn) {
         if (document.readyState !== 'loading') {
             fn();
         } else {
             document.addEventListener('DOMContentLoaded', fn);
         }
+
+        // Bron: https://github.com/kasszz/looklive-server/tree/student/Casper
+
+        wrapper = document.querySelector('.inner__wrapper');
+
+        links = Array.prototype.slice.call(document.querySelectorAll('.feed__item a'), 0);
+
+        links.forEach(function(link) {
+            link.addEventListener('click', function(evt) {
+                fetch("http://localhost:3000/api/appearance/" + link.href.split("/")[4], {
+                    method: "GET"   
+                })
+                    .then(function(res) {
+                        if (res.ok) {
+                            console.log(res);
+                            res.text()
+                                .then(function(text) {
+                                    wrapper.innerHTML = text;
+                                });
+                        }
+                    });
+
+                evt.preventDefault();
+            });
+        });
+
     }
 
     /**
@@ -21,8 +59,8 @@
      * @return {void}
      */
     function appearance() {
-        var firstProduct = document.querySelector('.product'),
-            firstIndicator = document.querySelector(
+        var firstProduct = document.querySelector('.product');
+        var firstIndicator = document.querySelector(
             '.product-indicator[data-uuid="' + firstProduct.getAttribute('data-uuid') + '"]'
         );
         var indicators = document.querySelectorAll('.product-indicator');
@@ -50,6 +88,8 @@
             });
         });
     }
+	
+	
 
     ready(function () {
         if (/appearance/.test(window.location.href)) {
