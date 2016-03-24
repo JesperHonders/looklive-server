@@ -45,6 +45,22 @@ The API returns JSON (for now).
 
 # Performance
 
+Converted header image
+Added sprite for menu images
+Optimized CSS selectors
+Minified CSS
+Semantisized HTML
+removed Jquery rewrote to Vanilla Javascript
+Minified JS
+Added Server Side rendering for pages
+Optimized Images
+Added Service Worker for Caching
+
+# Overal Performance Gain
+
+Before the optimalizations the site loaded in about 590ms, after all the optimalizations stated above the site loads now in 360ms.
+That is a total performance gain of 230ms. But these results maybe not trustworthy as the results change every refresh. Even with throttling on the browser performance may change.
+
 ## Spritesheet
 
 By replacing the icon png's to a spritesheet that uses span elements for icon placement, i managed to remove about 15ms from the loading time
