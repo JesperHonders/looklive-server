@@ -2,12 +2,12 @@ this.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('app-looklive').then(function(cache) {
             return cache.addAll([
-                './',
-                './js/app.js',
-				'./styles/style.css',
-				'./images/',
+                '/',
+                '/js/app.js',
+				'/styles/style.css',
+				'/images/header.png',
             ]);
-			
+
         })
     );
 });
@@ -27,17 +27,17 @@ this.addEventListener('install', function(event) {
 //            })
 ////    );
 //});
-
-function fetchAndCache(event) {
-
-	return fetch(event.request).then(response) {
-
-		return caches.open('app-looklive').then(function(cache) {
-
-			cache.put(event.request, response.clone());
-			return response;
-
-		});
-
-	}
-}
+//
+// function fetchAndCache(event) {
+//
+// 	return fetch(event.request).then(response) {
+//
+// 		return caches.open('app-looklive').then(function(cache) {
+//
+// 			cache.put(event.request, response.clone());
+// 			return response;
+//
+// 		});
+//
+// 	};
+// };

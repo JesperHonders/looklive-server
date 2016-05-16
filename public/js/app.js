@@ -6,7 +6,16 @@
 
     var links;
     var wrapper;
-	
+
+    var w = document.getElementsByTagName("BODY")[0];
+
+    new FontFaceObserver( "Raleway" )
+    .check()
+    .then( function(){
+      w.classList += "fonts-loaded";
+    });
+
+
 	if ('serviceWorker' in navigator) {
 			  navigator.serviceWorker.register('../sw.js', { scope: './' })
 				.then(function(reg) {
@@ -35,7 +44,7 @@
         links.forEach(function(link) {
             link.addEventListener('click', function(evt) {
                 fetch("http://localhost:3000/api/appearance/" + link.href.split("/")[4], {
-                    method: "GET"   
+                    method: "GET"
                 })
                     .then(function(res) {
                         if (res.ok) {
@@ -88,8 +97,8 @@
             });
         });
     }
-	
-	
+
+
 
     ready(function () {
         if (/appearance/.test(window.location.href)) {
